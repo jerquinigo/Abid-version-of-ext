@@ -2,15 +2,18 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-"use strict";
+// "use strict";
 
-// chrome.runtime.onInstalled.addListener(function() {
-//   chrome.storage.sync.set({ color: "#3aa757" }, function() {
-//     console.log("The color is green.");
-//   });
-// });
-
-let app = document.getElementsByClassName("App");
-app.addEventListener("click", () => {
-  console.log("app clicked");
+chrome.runtime.onInstalled.addListener(function() {
+  chrome.storage.sync.set({ color: "#3aa757" }, function() {
+    setInterval(() => {
+      console.log("The color is green.");
+    }, 1000);
+  });
+  console.log("hello");
 });
+//
+// let app = document.querySelector(".hello");
+// app.addEventListener("click", () => {
+//   console.log("hello clicked");
+// });
