@@ -69,7 +69,6 @@ class App extends Component {
 
   render() {
     if (!this.state.allSongs.length) return null;
-    console.log(this.state);
     return (
       <div className="App">
         <h1 className="hello">Hello world</h1>
